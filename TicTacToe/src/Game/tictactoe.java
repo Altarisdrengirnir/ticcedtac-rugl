@@ -9,12 +9,42 @@ import java.awt.*;
 
 import javax.swing.*;
 
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+
 
 public class tictactoe extends JFrame	
 {
-	private final int GRIDSIZE = 3; 
-	private static final boolean isXTurn = true;
+	JPanel p = new JPanel();
+	private final int GRID = 3;
+	Grid grid[][] = new Grid[GRID][GRID];
 	
+	public tictactoe()
+	{
+		super("Altaris");
+		setSize(400, 400);
+		setResizable(false);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		p.setLayout(new GridLayout(GRID, GRID));
+		for(int i = 0; i < GRID ; i++)
+		{
+			for(int j = 0; j < GRID; j++)
+			{
+				grid[i][j] = new Grid();
+				p.add(grid[i][j]);
+			}
+		}
+			
+		
+		setVisible(true);
+		
+	}
 	
-	 	
+	public static void main(String[] args)
+	{
+		new tictactoe();
+	}
 }

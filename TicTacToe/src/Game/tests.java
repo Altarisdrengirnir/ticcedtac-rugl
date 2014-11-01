@@ -1,5 +1,9 @@
 package Game;
 
-public class tests {
-
+public class tests
+{
+	public static void main(String[] args)
+	{
+		
+	}
 }
