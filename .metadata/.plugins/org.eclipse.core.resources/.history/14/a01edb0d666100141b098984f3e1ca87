@@ -1,0 +1,21 @@
+package Game;
+
+
+import java.awt.*;
+
+import javax.swing.*;
+import javax.swing.border.LineBorder;
+
+public class Grid extends JPanel
+{	
+	ImageIcon X, O;
+	int val = 0;
+	
+	
+	//Constructor that creates a singel cell in our grid.
+	public Grid() 
+	{
+		X = new ImageIcon(this.getClass().getResource("X.jpg"));
+		O = new ImageIcon(this.getClass().getResource("O.jpg"));
+	}	
+}

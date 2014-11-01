@@ -1,0 +1,46 @@
+package Game;
+
+/*
+	This is a project done by the Altaris.inc group in the
+	course Software engineering at the Reykjavik University in 
+	the fall of 2014.
+ */
+import java.awt.*;
+
+import javax.swing.*;
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+
+
+public class tictactoe extends JFrame	
+{
+	JPanel p = new JPanel();
+	private final int GRID = 9;
+	Grid grid[] = new Grid[GRID];
+	
+	public tictactoe()
+	{
+		super("Altaris");
+		setSize(1000, 1000);
+		setResizable(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		p.setLayout(new GridLayout(3, 3));
+		for(int i = 0; i < GRID ; i++)
+		{
+			grid[i] = new Grid();
+			p.add(grid[i]);
+		}
+		add(p);
+		setVisible(true);
+		
+	}
+	
+	public static void main(String[] args)
+	{
+		new tictactoe();
+	}
+}

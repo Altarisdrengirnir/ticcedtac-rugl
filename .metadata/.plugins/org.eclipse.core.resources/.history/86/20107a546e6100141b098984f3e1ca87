@@ -1,0 +1,42 @@
+package Game;
+
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+public class Grid extends JPanel implements ActionListener	
+{	
+	JPanel p = new JPanel();
+	ImageIcon X, O;
+	int val = 0;
+	
+	
+	//Constructor that creates a singel cell in our grid.
+	public Grid() 
+	{
+		X = new ImageIcon(this.getClass().getResource("X.jpg"));
+		O = new ImageIcon(this.getClass().getResource("0.jpg"));
+		//this.
+	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+		val++;
+		val %=3;
+		
+		if(val == 0)
+		{
+			
+			break;
+		}
+		else if(val == 1)
+		{
+			
+		}
+	}	
+}

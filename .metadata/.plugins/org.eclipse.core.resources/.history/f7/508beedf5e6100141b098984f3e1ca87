@@ -1,0 +1,30 @@
+package Game;
+
+/*
+	This is a project done by the Altaris.inc group in the
+	course Software engineering at the Reykjavik University in 
+	the fall of 2014.
+ */
+import java.awt.*;
+
+import javax.swing.*;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.GroupLayout;
+import javax.swing.LayoutStyle;
+
+
+
+public class tictactoe extends JFrame	
+{
+	private final int GRIDSIZE = 3; 
+	private static final boolean isXTurn = true;
+	
+	public static void main(String[] args)
+	{
+		
+		Button butt1 = new Button();
+	}
+}
