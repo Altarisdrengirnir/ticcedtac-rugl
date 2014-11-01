@@ -37,8 +37,7 @@ public class tictactoe extends JFrame
 				p.add(grid[i][j]);
 			}
 		}
-			
-		
+		add(p);
 		setVisible(true);
 		
 	}
