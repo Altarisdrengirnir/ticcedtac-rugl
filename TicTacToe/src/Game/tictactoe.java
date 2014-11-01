@@ -19,23 +19,20 @@ import javax.swing.*;
 public class tictactoe extends JFrame	
 {
 	JPanel p = new JPanel();
-	private final int GRID = 3;
-	Grid grid[][] = new Grid[GRID][GRID];
+	private final int GRID = 9;
+	Grid grid[] = new Grid[GRID];
 	
 	public tictactoe()
 	{
 		super("Altaris");
-		setSize(400, 400);
+		setSize(1000, 1000);
 		setResizable(false);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		p.setLayout(new GridLayout(GRID, GRID));
+		//setDefaultCloseOperation(EXIT_ON_CLOSE);
+		p.setLayout(new GridLayout(3, 3));
 		for(int i = 0; i < GRID ; i++)
 		{
-			for(int j = 0; j < GRID; j++)
-			{
-				grid[i][j] = new Grid();
-				p.add(grid[i][j]);
-			}
+			grid[i] = new Grid();
+			p.add(grid[i]);
 		}
 		add(p);
 		setVisible(true);
