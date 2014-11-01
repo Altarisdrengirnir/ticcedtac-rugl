@@ -23,12 +23,12 @@ public class Grid extends JButton implements ActionListener
 	}
 
 
-	@Override
+	//@Override
 	public void actionPerformed(ActionEvent e)
 	{
 		val++;
-		val %= 3;
-		int turn = 0;
+		val %=3;
+		
 		
 		if(val == 0)
 		{
@@ -42,45 +42,10 @@ public class Grid extends JButton implements ActionListener
 		{
 			setIcon(O);
 		}
-		
-//		while(check(turn) == false)
-//		{
-//			if(turn % 2 == 0)
-//			{
-//				setIcon(X);
-//			}
-//			else
-//			{
-//				setIcon(O);
-//			}
-//			turn++;
-//		}
+	}
+	
+	public boolean check(int val)
+	{
+		return false;
 	}
 }
-	
-//	public boolean check(int val)
-//	{	
-////		if()
-////		{
-////			return true;
-////		}
-////		else if()
-////		{
-////			
-////		}
-////		else if()
-////		{
-////			
-////		}
-////		else if()
-////		{
-////			
-////		}
-////		
-////		else if()
-////		{
-////			
-////		}
-//		
-//	}
-//}

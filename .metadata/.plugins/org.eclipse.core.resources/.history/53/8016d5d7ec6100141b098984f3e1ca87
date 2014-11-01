@@ -23,64 +23,42 @@ public class Grid extends JButton implements ActionListener
 	}
 
 
-	@Override
+	//@Override
 	public void actionPerformed(ActionEvent e)
 	{
 		val++;
-		val %= 3;
+		val %=3;
 		int turn = 0;
+		//setIcon(null);
 		
-		if(val == 0)
-		{
-			setIcon(null);
-		}
-		else if(val == 1)
+		if(turn % 2 == 0)
 		{
 			setIcon(X);
+			turn++;
 		}
-		else
+		else if(turn % 2 != 0)
 		{
 			setIcon(O);
+			turn++;
 		}
 		
-//		while(check(turn) == false)
+		
+//		if(val == 0)
 //		{
-//			if(turn % 2 == 0)
-//			{
-//				setIcon(X);
-//			}
-//			else
-//			{
-//				setIcon(O);
-//			}
-//			turn++;
+//			
+//		}
+//		else if(val == 1)
+//		{
+//			
+//		}
+//		else
+//		{
+//			
 //		}
 	}
-}
 	
-//	public boolean check(int val)
-//	{	
-////		if()
-////		{
-////			return true;
-////		}
-////		else if()
-////		{
-////			
-////		}
-////		else if()
-////		{
-////			
-////		}
-////		else if()
-////		{
-////			
-////		}
-////		
-////		else if()
-////		{
-////			
-////		}
-//		
-//	}
-//}
+	public boolean check(int val)
+	{
+		return false;
+	}
+}

@@ -1,0 +1,36 @@
+package Game;
+
+
+import java.awt.*;
+
+import javax.swing.*;
+import javax.swing.border.LineBorder;
+
+public class Grid extends JPanel
+{
+	private final int GRIDSIZE = 3; 
+	private static  boolean isXTurn = true;
+	
+	
+	//Constructor that creates a singel cell in our grid.
+	public Grid(char xOrO)
+	{
+		setBorder(new LineBorder(Color.ORANGE));
+	}
+	
+	
+	protected void drawLetter(Graphics g)
+	{
+		super.paintComponent(g);
+		
+		if(isXTurn == true)
+		{
+			char[] X = {'X'};
+			g.drawChars(X, 0, 1, 20, 20);
+		}
+		else
+		{
+			g.drawOval(10, 10, getWidth() - 20, getHeight() -20);
+		}
+	}
+}
