@@ -21,7 +21,7 @@ public class tictactoe extends JFrame
 	JPanel p = new JPanel();
 	private final int GRID = 3;
 	Grid grid[][] = new Grid[GRID][GRID];
-	//kari
+	
 	public tictactoe()
 	{
 		super("Altaris");
